@@ -6,10 +6,14 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+
+    --animate-duration: 1s;
 }
 
 .container {
     max-width: 1300px;
+    width: 100%;
+    padding: 0 30px;
     display: flex;
     margin: 0 auto;
 }
@@ -22,6 +26,8 @@ body {
     align-items: center;
     justify-content: space-between;
     z-index: 100;
+    position: fixed;
+    top: 0;
     background: rgb(255, 255, 255);
     box-shadow: 0 0 3px 1px rgba(0,0,0,.2);
 }
@@ -58,29 +64,77 @@ body {
 
 
 .main-layout {
-    height: calc(100vh - 70px);
+    /* height: calc(100vh - 70px); */
     background: rgb(248, 249, 252);
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .cards__container {
-    width: 700px;
-    height: 500px;
-    background: yellowgreen;
+    height: 600px;
+    flex: 1 1 auto;
+    background: rgb(255, 255, 255);
     display: grid;
     justify-items: stretch;
 }
 
+.cards__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards__item-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.cards__item-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .cards__item--binary {
-    background: rgb(255, 255, 255);
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 5;
+}
+
+.cards__item--binary > .cards__item-wrapper {
+    background: rgb(255, 255, 255);
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-name: flipInY;
+}
+
+.cards__item--binary:hover > .cards__item-wrapper{
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-fill-mode: forwards;
+    animation-name: flipOutY;
+}
+
+.cards_item-btn--binary {
+    background: rgb(0, 173, 238);
+    color: rgb(255, 255, 255);
+    width: 100px;
+    min-height: 36px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+
+.cards_item-btn--binary:hover {
+    background: rgb(3,60,146);
 }
 
 .cards__item--qa {
@@ -149,4 +203,5 @@ body {
 
 .footer {
     margin-top: 50px;
+    margin-bottom: 10px;
 }
