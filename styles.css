@@ -79,6 +79,7 @@ body {
     background: rgb(255, 255, 255);
     display: grid;
     justify-items: stretch;
+    grid-template-columns: repeat(7, 1fr) 150px;
 }
 
 .cards__item {
@@ -99,6 +100,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.cards__item-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.cards__item-text {
+    font-weight: 600;
+    overflow-y: auto;
+    margin: 20px 10px;
     width: 100%;
     height: 100%;
 }
@@ -138,11 +155,27 @@ body {
 }
 
 .cards__item--qa {
-    background: rgb(81, 192, 119);
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 5;
     grid-row-end: 9;
+}
+
+.cards__item--qa > .cards__item-wrapper {
+    background: rgb(81, 192, 119);
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-name: flipInY;
+}
+
+.cards__item--qa:hover > .cards__item-wrapper {
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-fill-mode: forwards;
+    animation-name: flipOutY;
+}
+
+.cards__item-label--qa {
+    color: rgb(255, 255, 255);
+    font-size: 100px;
 }
 
 .cards__item--js {
