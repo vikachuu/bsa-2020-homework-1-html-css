@@ -310,11 +310,31 @@ body {
 }
 
 .cards__item--blog {
-    background: rgb(4, 67, 163);
     grid-column-start: 8;
     grid-column-end: 9;
     grid-row-start: 6;
     grid-row-end: 8;
+}
+
+.cards__item--blog > .cards__item-wrapper {
+    background: rgb(4, 67, 163);
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-name: fadeInRight;
+}
+
+.cards__item--blog:hover > .cards__item-wrapper {
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-fill-mode: forwards;
+    animation-name: fadeOutRight;
+}
+
+.cards__item-label--blog {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.cards__item-text--blog {
+    font-weight: 100;
 }
 
 .cards__item--contacts {
