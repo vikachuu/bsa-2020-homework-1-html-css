@@ -79,7 +79,7 @@ body {
     background: rgb(255, 255, 255);
     display: grid;
     justify-items: stretch;
-    grid-template-columns: repeat(7, 1fr) 150px;
+    grid-template-columns: repeat(7, 1fr) 200px;
     grid-template-rows: repeat(7, 1fr) 75px;
 }
 
@@ -103,6 +103,15 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+}
+
+.cards__item-icon {
+    font-size: 30px;
+    margin: 5px;
+}
+
+.cards__item-icon:hover {
+    color: rgb(46, 153, 254);
 }
 
 .cards__item-label {
@@ -338,11 +347,27 @@ body {
 }
 
 .cards__item--contacts {
-    background: rgb(0, 38, 94);
     grid-column-start: 8;
     grid-column-end: 9;
     grid-row-start: 8;
     grid-row-end: 9;
+}
+
+.cards__item--contacts > .cards__item-wrapper {
+    background: rgb(0, 38, 94);
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-name: fadeInRight;
+}
+
+.cards__item--contacts:hover > .cards__item-wrapper {
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-fill-mode: forwards;
+    animation-name: fadeOutRight;
+}
+
+.cards__item-label--contacts {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
 }
 
 .footer {
