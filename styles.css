@@ -80,6 +80,7 @@ body {
     display: grid;
     justify-items: stretch;
     grid-template-columns: repeat(7, 1fr) 150px;
+    grid-template-rows: repeat(7, 1fr) 75px;
 }
 
 .cards__item {
@@ -269,7 +270,6 @@ body {
 }
 
 .cards__item--dotnet:hover > .cards__item-wrapper {
-    background: rgb(100, 33, 119);
     animation-duration: calc(var(--animate-duration) * 0.75);
     animation-fill-mode: forwards;
     animation-name: fadeOutBottomRight;
@@ -281,11 +281,32 @@ body {
 }
 
 .cards__item--events {
-    background: rgb(46, 153, 254);
     grid-column-start: 8;
     grid-column-end: 9;
     grid-row-start: 4;
     grid-row-end: 6;
+}
+
+.cards__item--events > .cards__item-wrapper {
+    background: rgb(46, 153, 254);
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-name: fadeInRight;
+}
+
+.cards__item--events:hover > .cards__item-wrapper {
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-fill-mode: forwards;
+    animation-name: fadeOutRight;
+}
+
+.cards__item-label--events {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.cards__item-text--events {
+    font-weight: 100;
+    overflow-y: scroll;
 }
 
 .cards__item--blog {
