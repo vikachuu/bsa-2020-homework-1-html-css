@@ -1,200 +1,207 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Binary Studio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="animations.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div id="root">
-
-        <div class="header">
-            <div class="header__logo">
-                <img src="assets/logo@3x_optimized.svg" alt="Logo">
-            </div>
-
-            <div class="menu__container">
-                <div class="notification-icon">
-                    <i class="fa fa-bell"></i>
-                </div>
-                <div class="avatar__item-round">
-                    <span>V</span>
-                    <div class="menu-popup">
-                        <div class="menu-popup__label">Viktoriia Kozopas</div>
-                        <div class="menu-popup__item">Profile</div>
-                        <div class="menu-popup__item">Log Out</div>
-                    </div>
-                </div>
-            </div>
-
+      <div class="header">
+        <div class="header__logo">
+          <img src="assets/logo@3x_optimized.svg" alt="Logo" />
         </div>
 
-        <div class="main-layout">
-            <div class="container">
-                <div class="cards__container">
-
-                    <div class="cards__item cards__item--binary">
-                        <div class="cards__item-wrapper">
-                            <div class="cards__item-img">
-                                <img src="assets/academy_logo.svg" alt="Logo">
-                            </div>
-                        </div>
-                        <button class="cards_item-btn cards_item-btn--binary">Join</button>
-                    </div>
-
-                    <div class="cards__item cards__item--qa">
-                        <div class="cards__item-wrapper">
-                            <div class="cards__item-label cards__item-label--qa">
-                                QA
-                            </div>
-                        </div>
-                        <div class="cards__item-text cards__item-text--qa">Advanced online course focusing on the finer
-                            points of QA.</div>
-                    </div>
-
-                    <div class="cards__item cards__item--js">
-                        <div class="cards__item-wrapper">
-                            <div class="cards__item-label cards__item-label--js">
-                                JS
-                            </div>
-                        </div>
-                        <div class="cards__item-text cards__item-text--js">An online intensive course on building web
-                            applications with JavaScript</div>
-                    </div>
-
-                    <div class="cards__item cards__item--java">
-                        <div class="cards__item-wrapper">
-                            <div class="cards__item-label cards__item-label--java">
-                                Java
-                            </div>
-                        </div>
-                        <div class="cards__item-text cards__item-text--java">Advanced online course on building web
-                            applications with Java</div>
-                    </div>
-
-                    <div class="cards__item cards__item--php">
-                        <div class="cards__item-wrapper">
-                            <div class="cards__item-label cards__item-label--php">
-                                php
-                            </div>
-                        </div>
-                        <div class="cards__item-text cards__item-text--php">An online intensive course on building web
-                            applications with PHP</div>
-                    </div>
-
-                    <div class="cards__item cards__item--dotnet">
-                        <div class="cards__item-wrapper">
-                            <div class="cards__item-label cards__item-label--dotnet">
-                                .NET
-                            </div>
-                        </div>
-                        <div class="cards__item-text cards__item-text--dotnet">An online intensive course on building
-                            web
-                            applications with .NET</div>
-                    </div>
-
-                    <div class="cards__item cards__item--events">
-                        <div class="cards__item-wrapper">
-                            <div class="cards__item-label cards__item-label--events">
-                                Events
-                            </div>
-                        </div>
-                        <div class="cards__item-text cards__item-text--events">У березні-квітні відбулася серія наших
-                            онлайн трансляцій по веб-розробці під кодовою назвою Homeference. Ми на деякий час залишимо
-                            посилання на запис трансляцій нижче. Дивись, шарь з друзями, а щоб не пропустити майбутні
-                            події - підписуйся на <a href="https://t.me/bsacademy">телеграм Binary Studio Academy</a> .
-                        </div>
-                    </div>
-
-                    <div class="cards__item cards__item--blog">
-                        <div class="cards__item-wrapper">
-                            <div class="cards__item-label cards__item-label--blog">
-                                Blog
-                            </div>
-                        </div>
-                        <div class="cards__item-text cards__item-text--blog">Ділимось інсайтами Академії, досвідом
-                            створення world-class проектів та роздумами про життя, код, роботу.
-                        </div>
-                    </div>
-
-                    <div class="cards__item cards__item--contacts">
-                        <div class="cards__item-wrapper">
-                            <div class="cards__item-label cards__item-label--blog">
-                                Contacts
-                            </div>
-                        </div>
-                        <span class="cards__item-icon">
-                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                        </span>
-                        <span class="cards__item-icon">
-                            <i class="fa fa-telegram" aria-hidden="true"></i>
-                        </span>
-                        <span class="cards__item-icon">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                </div>
+        <div class="menu__container">
+          <div class="notification-icon">
+            <i class="fa fa-bell"></i>
+          </div>
+          <div class="avatar__item-round">
+            <span>V</span>
+            <div class="menu-popup">
+              <div class="menu-popup__label">Viktoriia Kozopas</div>
+              <div class="menu-popup__item">Profile</div>
+              <div class="menu-popup__item">Log Out</div>
             </div>
-
-            <div class="footer">
-                <span> © Powered by Binary Studio Team</span>
-            </div>
-
+          </div>
         </div>
+      </div>
+
+      <div class="main-layout">
+        <div class="container">
+          <div class="cards__container">
+            <div class="cards__item cards__item--binary">
+              <div class="cards__item-wrapper">
+                <div class="cards__item-img">
+                  <img src="assets/academy_logo.svg" alt="Logo" />
+                </div>
+              </div>
+              <button class="cards_item-btn cards_item-btn--binary">
+                Join
+              </button>
+            </div>
+
+            <div class="cards__item cards__item--qa">
+              <div class="cards__item-wrapper">
+                <div class="cards__item-label cards__item-label--qa">
+                  QA
+                </div>
+              </div>
+              <div class="cards__item-text cards__item-text--qa">
+                Advanced online course focusing on the finer points of QA.
+              </div>
+            </div>
+
+            <div class="cards__item cards__item--js">
+              <div class="cards__item-wrapper">
+                <div class="cards__item-label cards__item-label--js">
+                  JS
+                </div>
+              </div>
+              <div class="cards__item-text cards__item-text--js">
+                An online intensive course on building web applications with
+                JavaScript
+              </div>
+            </div>
+
+            <div class="cards__item cards__item--java">
+              <div class="cards__item-wrapper">
+                <div class="cards__item-label cards__item-label--java">
+                  Java
+                </div>
+              </div>
+              <div class="cards__item-text cards__item-text--java">
+                Advanced online course on building web applications with Java
+              </div>
+            </div>
+
+            <div class="cards__item cards__item--php">
+              <div class="cards__item-wrapper">
+                <div class="cards__item-label cards__item-label--php">
+                  php
+                </div>
+              </div>
+              <div class="cards__item-text cards__item-text--php">
+                An online intensive course on building web applications with PHP
+              </div>
+            </div>
+
+            <div class="cards__item cards__item--dotnet">
+              <div class="cards__item-wrapper">
+                <div class="cards__item-label cards__item-label--dotnet">
+                  .NET
+                </div>
+              </div>
+              <div class="cards__item-text cards__item-text--dotnet">
+                An online intensive course on building web applications with
+                .NET
+              </div>
+            </div>
+
+            <div class="cards__item cards__item--events">
+              <div class="cards__item-wrapper">
+                <div class="cards__item-label cards__item-label--events">
+                  Events
+                </div>
+              </div>
+              <div class="cards__item-text cards__item-text--events">
+                У березні-квітні відбулася серія наших онлайн трансляцій по
+                веб-розробці під кодовою назвою Homeference. Ми на деякий час
+                залишимо посилання на запис трансляцій нижче. Дивись, шарь з
+                друзями, а щоб не пропустити майбутні події - підписуйся на
+                <a href="https://t.me/bsacademy"
+                  >телеграм Binary Studio Academy</a
+                >
+                .
+              </div>
+            </div>
+
+            <div class="cards__item cards__item--blog">
+              <div class="cards__item-wrapper">
+                <div class="cards__item-label cards__item-label--blog">
+                  Blog
+                </div>
+              </div>
+              <div class="cards__item-text cards__item-text--blog">
+                Ділимось інсайтами Академії, досвідом створення world-class
+                проектів та роздумами про життя, код, роботу.
+              </div>
+            </div>
+
+            <div class="cards__item cards__item--contacts">
+              <div class="cards__item-wrapper">
+                <div class="cards__item-label cards__item-label--blog">
+                  Contacts
+                </div>
+              </div>
+              <span class="cards__item-icon">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+              </span>
+              <span class="cards__item-icon">
+                <i class="fa fa-telegram" aria-hidden="true"></i>
+              </span>
+              <span class="cards__item-icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <span> © Powered by Binary Studio Team</span>
+        </div>
+      </div>
     </div>
     <div class="alert-message">
-        <div class="alert-message__container">
-
-            <div class="alert-message__item alert-message__item--error">
-                <div class="alert-message__item-icon">
-                    <i class="fa fa-exclamation-circle"></i>
-                </div>
-                <div>
-                    <div class="alert-message__item-header">
-                        Error
-                    </div>
-                    <div class="alert-message__item-text">
-                        Something went wrong. Please try again later.
-                    </div>
-                </div>
+      <div class="alert-message__container">
+        <div class="alert-message__item alert-message__item--error">
+          <div class="alert-message__item-icon">
+            <i class="fa fa-exclamation-circle"></i>
+          </div>
+          <div>
+            <div class="alert-message__item-header">
+              Error
             </div>
-
-            <div class="alert-message__item alert-message__item--success">
-                <div class="alert-message__item-icon">
-                    <i class="fa fa-check-circle"></i>
-                </div>
-                <div>
-                    <div class="alert-message__item-header">
-                        Success
-                    </div>
-                    <div class="alert-message__item-text">
-                        Profile was updated.
-                    </div>
-                </div>
-
+            <div class="alert-message__item-text">
+              Something went wrong. Please try again later.
             </div>
-
-            <div class="alert-message__item alert-message__item--warning">
-                <div class="alert-message__item-icon">
-                    <i class="fa fa-check-circle"></i>
-                </div>
-                <div>
-                    <div class="alert-message__item-header">
-                        Warning
-                    </div>
-                    <div class="alert-message__item-text">
-                        Deadline is comming.
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
-    </div>
-</body>
 
+        <div class="alert-message__item alert-message__item--success">
+          <div class="alert-message__item-icon">
+            <i class="fa fa-check-circle"></i>
+          </div>
+          <div>
+            <div class="alert-message__item-header">
+              Success
+            </div>
+            <div class="alert-message__item-text">
+              Profile was updated.
+            </div>
+          </div>
+        </div>
+
+        <div class="alert-message__item alert-message__item--warning">
+          <div class="alert-message__item-icon">
+            <i class="fa fa-check-circle"></i>
+          </div>
+          <div>
+            <div class="alert-message__item-header">
+              Warning
+            </div>
+            <div class="alert-message__item-text">
+              Deadline is comming.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
