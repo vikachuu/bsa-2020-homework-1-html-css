@@ -207,11 +207,27 @@ body {
 }
 
 .cards__item--java {
-    background: rgb(225, 44, 76);
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 7;
     grid-row-end: 9;
+}
+
+.cards__item--java > .cards__item-wrapper {
+    background: rgb(225, 44, 76);
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-name: fadeInUp;
+}
+
+.cards__item--java:hover > .cards__item-wrapper {
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-fill-mode: forwards;
+    animation-name: fadeOutDown;
+}
+
+.cards__item-label--java {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
 }
 
 .cards__item--php {
