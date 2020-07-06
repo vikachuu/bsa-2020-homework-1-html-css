@@ -256,11 +256,28 @@ body {
 }
 
 .cards__item--dotnet {
-    background: rgb(100, 33, 119);
     grid-column-start: 5;
     grid-column-end: 8;
     grid-row-start: 4;
     grid-row-end: 9;
+}
+
+.cards__item--dotnet > .cards__item-wrapper {
+    background: rgb(100, 33, 119);
+    animation-duration: calc(var(--animate-duration) * 0.75);
+    animation-name: fadeInBottomRight;
+}
+
+.cards__item--dotnet:hover > .cards__item-wrapper {
+    background: rgb(100, 33, 119);
+    animation-duration: calc(var(--animate-duration) * 0.75);
+    animation-fill-mode: forwards;
+    animation-name: fadeOutBottomRight;
+}
+
+.cards__item-label--dotnet {
+    color: rgb(255, 255, 255);
+    font-size: 100px;
 }
 
 .cards__item--events {
