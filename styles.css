@@ -115,7 +115,8 @@ body {
 .cards__item-text {
     font-weight: 600;
     overflow-y: auto;
-    margin: 20px 10px;
+    margin: 0 10px;
+    padding: 20px 0;
     width: 100%;
     height: 100%;
 }
@@ -179,11 +180,30 @@ body {
 }
 
 .cards__item--js {
-    background: rgb(248, 207, 105);
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 7;
+}
+
+.cards__item--js > .cards__item-wrapper {
+    background: rgb(248, 207, 105);
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-name: flipInY;
+}
+
+.cards__item--js:hover > .cards__item-wrapper {
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-fill-mode: forwards;
+    animation-name: flipOutY;
+}
+
+.cards__item-label--js {
+    color: rgb(0, 0, 0);
+    font-size: 100px;
+    font-weight: 900;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .cards__item--java {
