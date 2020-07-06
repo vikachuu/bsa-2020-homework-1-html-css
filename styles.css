@@ -231,11 +231,28 @@ body {
 }
 
 .cards__item--php {
-    background: rgb(136, 146, 191);
     grid-column-start: 5;
     grid-column-end: 9;
     grid-row-start: 1;
     grid-row-end: 4;
+}
+
+.cards__item--php > .cards__item-wrapper {
+    background: rgb(136, 146, 191);
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-name: fadeInTopRight;
+}
+
+.cards__item--php:hover > .cards__item-wrapper {
+    animation-duration: calc(var(--animate-duration) * 0.5);
+    animation-fill-mode: forwards;
+    animation-name: fadeOutTopRight;
+}
+
+.cards__item-label--php {
+    color: rgb(0, 0, 0);
+    font-style: italic;
+    font-size: 100px;
 }
 
 .cards__item--dotnet {
