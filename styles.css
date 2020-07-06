@@ -55,6 +55,7 @@ body {
   font-size: 30px;
   color: rgb(132, 137, 143);
   margin-right: 30px;
+  cursor: pointer;
 }
 
 .avatar__item-round {
@@ -73,6 +74,7 @@ body {
 
 .avatar__item-round:hover {
   background-color: rgb(221, 125, 0);
+  cursor: pointer;
 }
 
 .menu-popup {
@@ -119,23 +121,24 @@ body {
 }
 
 .main-layout {
-  /* height: calc(100vh - 70px); */
+  height: calc(100vh);
   background: rgb(248, 249, 252);
   padding-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
 }
 
 .cards__container {
-  height: 600px;
+  height: 50vw;
   flex: 1 1 auto;
   background: rgb(255, 255, 255);
   display: grid;
   justify-items: stretch;
-  grid-template-columns: repeat(7, 1fr) 200px;
-  grid-template-rows: repeat(7, 1fr) 75px;
+  grid-template-columns: repeat(auto-fill, 12.5%);
+  grid-template-rows: repeat(auto-fill, 12.5%);
 }
 
 .cards__item {
@@ -482,4 +485,79 @@ body {
 
 .alert-message__item-text {
   color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 972px) {
+  .cards__container {
+    height: 70vw;
+    flex: 1 1 auto;
+    background: rgb(255, 255, 255);
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: repeat(auto-fill, 25%);
+    grid-template-rows: repeat(auto-fill, 11.5%);
+  }
+
+  .cards__item--binary {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+
+  .cards__item--js {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+
+  .cards__item--events {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .cards__item--blog {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+
+  .cards__item--contacts {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .cards__item--java {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 8;
+  }
+
+  .cards__item--php {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 8;
+  }
+
+  .cards__item--qa {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 10;
+  }
+
+  .cards__item--dotnet {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 10;
+  }
 }
