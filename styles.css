@@ -57,6 +57,11 @@ body {
   margin-right: 30px;
 }
 
+.avatar__item-wrapper {
+    margin: -10px;
+    padding: 10px;
+}
+
 .avatar__item-round {
   width: 40px;
   height: 40px;
@@ -80,7 +85,7 @@ body {
   height: 100px;
   visibility: hidden;
   position: absolute;
-  top: 40px;
+  top: 45px;
   right: 0;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
@@ -90,7 +95,7 @@ body {
   flex-direction: column;
 }
 
-.avatar__item-round:hover .menu-popup {
+.avatar__item-wrapper:hover .menu-popup {
   visibility: visible;
 }
 
